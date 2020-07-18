@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Plasma Bolivia - Donaciones de plasma</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Menu de Navegacion -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Plasma-Bolivia</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav-home"
+                aria-controls="ftco-nav-home" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav-home">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="donantes.html" class="nav-link">Donadores</a></li>
+                    <li class="nav-item cta">
+                        <a href="#" class="nav-link" data-toggle="modal" data-target="#mdl_registro">
+                            <span>Registrar Donacion</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Menu de Navegacion -->
+
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
+                data-scrollax-parent="true">
+                <div class="col-md-9 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                    <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong>Dona plasma
+                            <br></strong> y salva vidas</h1>
+                    <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Encuentra a tu donante</p>
+                    <div class="block-17 my-4">
+                        <form action="" id="frm_search" method="post" class="d-block d-flex">
+                            <div class="fields d-block d-flex flex-wrap">
+                                <div class="select-wrap flex-fill">
+                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                    <select name="plasma" id="" class="form-control" placeholder="Keyword search">
+                                        <option value="ABP">AB(+)</option>
+                                        <option value="ABN">AB(-)</option>
+                                        <option value="AP">A(+)</option>
+                                        <option value="AN">A(-)</option>
+                                        <option value="BP">B(+)</option>
+                                        <option value="BN">B(-)</option>
+                                        <option value="OP">O(+)</option>
+                                        <option value="ON">O(-)</option>
+                                    </select>
+                                </div>
+                                <div class="select-wrap flex-fill">
+                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                    <select name="city" id="" class="form-control" placeholder="Keyword search">
+                                        <option value="LP">La Paz</option>
+                                        <option value="CB">Cochabamba</option>
+                                        <option value="SC">Santa Cruz</option>
+                                        <option value="BN">Beni</option>
+                                        <option value="CH">Chuquisaca</option>
+                                        <option value="OR">Oruro</option>
+                                        <option value="PN">Pando</option>
+                                        <option value="PT">Potosi</option>
+                                        <option value="TR">Tarija</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <input type="submit" class="search-submit btn btn-primary" value="Buscar">
+                        </form>
+                    </div>
+                    <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">O se un Donador</p>
+                    <button class="search-submit btn btn-primary" 
+                            data-toggle="modal" 
+                            data-target="#mdl_registro">
+                            Quiero Donar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-section services-section bg-light">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon"><span class="flaticon-guarantee"></span></div>
+                        </div>
+                        <div class="media-body p-2 mt-2">
+                            <h3 class="heading mb-3">Datos</h3>
+                            <p>No seas complice de la mala información que circula en las Redes Sociales.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon"><span class="flaticon-like"></span></div>
+                        </div>
+                        <div class="media-body p-2 mt-2">
+                            <h3 class="heading mb-3">Solidaridad</h3>
+                            <p>Si has vencido el COVID-19, dona para salvar vidas Bolivianas. Seamos Solidarios</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon"><span class="flaticon-support"></span></div>
+                        </div>
+                        <div class="media-body p-2 mt-2">
+                            <h3 class="heading mb-3">Contacto</h3>
+                            <p>Si tienes algun inconveniente con la p&aacute;gina por favor contactate con nosotros.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_1.jpg);">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                    <h2 class="mb-4">Datos del COVID-19 en BOLIVIA</h2>
+                    <span class="subheading">
+                        Datos actualizados en fecha: 
+                        <strong class="number" id="fecha">0</strong>
+                    </span>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="row" id="datos" onload="contador()">
+                        <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="block-18 text-center">
+                                <div class="text">
+                                    <strong class="number" data-number="2000" id="donantes">0</strong>
+                                    <span>Donantes</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="block-18 text-center">
+                                <div class="text">
+                                    <strong class="number" data-number="100000" id="recuperados">0</strong>
+                                    <span>Recuperados</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="block-18 text-center">
+                                <div class="text">
+                                    <strong class="number" data-number="40000" id="infectados">0</strong>
+                                    <span>Infectados</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="block-18 text-center">
+                                <div class="text">
+                                    <strong class="number" data-number="87000" id="fallecidos">0</strong>
+                                    <span>Fallecidos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">¿Tiene problemas con la Pagina?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon icon-map-marker"></span><span class="text">La Paz - Bolivia</span></li>
+                                <li><a href="https://wa.me/59169788901"><span class="icon icon-phone"></span><span class="text">69788901</span></a></li>
+                                <li><a href="mailto:sangrecovidbo@gmail.com"><span class="icon icon-envelope"></span><span
+                                            class="text">sangrecovidbo@gmail.com</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+                        is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                            target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Modal de Registro -->
+    <div class="modal fade" id="mdl_registro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ingrese sus datos</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <small class="text-danger"><span class="text-danger">*</span>&nbsp;Todos los campos son obligatorios.</small>
+                <form id="frm_reg_user">
+                    <div class="form-group" id="input_name">
+                        <label for="name">Nombre&nbsp;<span class="text-danger">*</span></label>
+                        <input type="text" 
+                                class="form-control" 
+                                id="name" 
+                                name="name" 
+                                placeholder="Nombre">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group" id="input_phoneNumber">
+                        <label for="phoneNumber">Celular&nbsp;<span class="text-danger">*</span></label>
+                        <input type="number" 
+                                class="form-control" 
+                                id="phoneNumber" 
+                                name="phoneNumber" 
+                                placeholder="Celular">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <input type="hidden" name="line" value="es">
+                    <input type="hidden" name="state" value="1">
+                    <input type="hidden" name="ban" value="0">
+                    <div class="form-row">
+                        <div class="select-wrap flex-fill col-sm-12 col-md-6">
+                            <label for="plasma">Plasma&nbsp;<span class="text-danger">*</span></label>
+                            <select name="plasma" id="plasma" class="form-control" placeholder="Keyword search">
+                                <option value="ABP">AB(+)</option>
+                                <option value="ABN">AB(-)</option>
+                                <option value="AP">A(+)</option>
+                                <option value="AN">A(-)</option>
+                                <option value="BP">B(+)</option>
+                                <option value="BN">B(-)</option>
+                                <option value="OP">O(+)</option>
+                                <option value="ON">O(-)</option>
+                            </select>
+                        </div>
+                        <div class="select-wrap flex-fill col-sm-12 col-md-6">
+                            <label for="city">Departamento&nbsp;<span class="text-danger">*</span></label>
+                            <select name="city" id="" class="form-control" placeholder="Keyword search">
+                                <option value="LP">La Paz</option>
+                                <option value="CB">Cochabamba</option>
+                                <option value="SC">Santa Cruz</option>
+                                <option value="BN">Beni</option>
+                                <option value="CH">Chuquisaca</option>
+                                <option value="OR">Oruro</option>
+                                <option value="PN">Pando</option>
+                                <option value="PT">Potosi</option>
+                                <option value="TR">Tarija</option>
+                            </select>
+                        </div>
+                    </div>
+                  </form>
+            </div>
+            <div class="modal-footer">
+            <button type="button" 
+                    class="btn btn-secondary" 
+                    data-dismiss="modal">Cerrar</button>
+            <button type="submit" 
+                    class="btn btn-primary"
+                    id="save_user">Guardar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" /></svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/scrollax.min.js"></script>
+
+    <script src="js/sweetalert2.all.min.js"></script>
+
+    <!-- Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+    <script src="js/firebase.js"></script>
+
+    
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

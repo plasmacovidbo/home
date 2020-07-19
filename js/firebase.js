@@ -136,7 +136,7 @@ $(document).ready(function () {
         e.preventDefault();
         let plasma = $("#frm_search select[name='plasma']").val()
         let city = $("#frm_search select[name='city']").val()
-        window.location.href = `http://192.168.100.98:5500/donantes.html?plasma=${plasma}&city=${city}`
+        window.location.href = `https://plasmacovidbo.github.io/home/donantes.html?plasma=${plasma}&city=${city}`
     });
 
     function miCard(datos){

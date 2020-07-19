@@ -1,3 +1,4 @@
+$(document).ready(function () {
 function mostrarTodo(){
     var res_bus = "";
     // Get parameters from the current URL
@@ -45,3 +46,4 @@ function mostrarTodo(){
     }
 }
 mostrarTodo()
+}

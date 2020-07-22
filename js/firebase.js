@@ -1,8 +1,7 @@
-$(document).ready(function () {
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyDndyi2SWHifEyrTT9AETnJJuWudBsvJxA",
-        authDomain: "plcovidbo.firebaseapp.com",
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyDndyi2SWHifEyrTT9AETnJJuWudBsvJxA",
+    authDomain: "plcovidbo.firebaseapp.com",
         databaseURL: "https://plcovidbo.firebaseio.com",
         projectId: "plcovidbo",
         storageBucket: "plcovidbo.appspot.com",
@@ -15,6 +14,7 @@ $(document).ready(function () {
     firebase.analytics();
     
     var db = firebase.firestore();
+$(document).ready(function () {
     
     $("#save_user").click(function (e) { 
         e.preventDefault();
@@ -110,18 +110,6 @@ $(document).ready(function () {
             return "Other"
         }
     }
-    var getParams = function (url) {
-        var params = {};
-        var parser = document.createElement('a');
-        parser.href = url;
-        var query = parser.search.substring(1);
-        var vars = query.split('&');
-        for (var i = 0; i < vars.length; i++) {
-            var pair = vars[i].split('=');
-            params[pair[0]] = decodeURIComponent(pair[1]);
-        }
-        return params;
-    };
 
     if(getParams(window.location.href).plasma != null &&
         getParams(window.location.href).plasma != ""){
@@ -136,79 +124,16 @@ $(document).ready(function () {
         e.preventDefault();
         let plasma = $("#frm_search select[name='plasma']").val()
         let city = $("#frm_search select[name='city']").val()
-        window.location.href = `http://192.168.100.98:5500/donantes.html?plasma=${plasma}&city=${city}`
+        // window.location.href = `http://192.168.100.98:5500/donantes.html?plasma=${plasma}&city=${city}`
+        window.location.href = `https://plasmacovidbo.github.io/home/donantes.html?plasma=${plasma}&city=${city}`
     });
 
-    function miCard(datos){
-        let pl = datos.data().plasma.replace(/N|P/, function(char){
-            return char=="N"? "(-)": "(+)"
-        })
-        let city = ""
-        switch (datos.data().city) {
-            case "LP":
-                city = "La Paz"
-                break;
-            case "OR":
-                city = "Oruro"
-                break;
-            case "PT":
-                city = "Potosi"
-                break;
-            case "CB":
-                city = "Cochabamba"
-                break;
-            case "CH":
-                city = "Chuquisaca"
-                break;
-            case "TR":
-                city = "Tarija"
-                break;
-            case "PN":
-                city = "Pando"
-                break;
-            case "BN":
-                city = "Beni"
-                break;
-            case "SC":
-                city = "Santa Cruz"
-                break;
-            default:
-                city = "Error"
-                break;
-        }
-        return `<div class="col-md-4 ftco-animate fadeInUp ftco-animated">
-            <div class="destination">
-                <div class="text p-3">
-                    <div class="d-flex justify-content-between">
-                        <div class="two text-left">
-                            <span class="price">${pl}</span>
-                        </div>
-                        <div class="two d-none">
-                            <small><a href="${datos.id}">Reportar</a></small>
-                        </div>
-                    </div>
-                    <h3 class="days text-uppercase"><span>${datos.data().name}</span></h3>
-                    <p class="days text-uppercase"><span>${datos.data().phoneNumber}</span></p>
-                    <span><i class="icon-map-o"></i> ${city}, Bo</span>
-                    <hr>
-                    <p class="bottom-area d-flex">
-                        <span class="mr-auto">
-                            <a class="btn btn-sm btn-info text-white" href="tel:+591${datos.data().phoneNumber}">Llamar</a>
-                        </span>
-                        <span class="ml-auto">
-                            <a class="btn btn-sm btn-success text-white" href="https://wa.me/591${datos.data().phoneNumber}" target="_blank">Whatsapp</a>
-                        </span>
-                    </p>
-                </div>
-            </div>
-        </div>`
-    }
-
+    
     var c = 0
     db.collection("users").onSnapshot(querySnapshot => {
         querySnapshot.docChanges().forEach(doc => {
             c = querySnapshot.size
-        
+            
             db.collection("datos").onSnapshot(function(snapshot) {
                 // doc.data() is never undefined for query doc snapshots
                 snapshot.docChanges().forEach(function(doc) {
@@ -224,10 +149,10 @@ $(document).ready(function () {
                             var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
                             $('.number').each(function(){
                                 var $this = $(this),
-                                    num = $this.data('number');
+                                num = $this.data('number');
                                     // console.log(num);
-                                $this.animateNumber(
-                                {
+                                    $this.animateNumber(
+                                        {
                                     number: num,
                                     numberStep: comma_separator_number_step
                                 }, 1500
@@ -241,3 +166,81 @@ $(document).ready(function () {
     });
 
 });
+
+var getParams = function (url) {
+    var params = {};
+    var parser = document.createElement('a');
+    parser.href = url;
+    var query = parser.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        params[pair[0]] = decodeURIComponent(pair[1]);
+    }
+    return params;
+};
+
+function miCard(datos){
+    let pl = datos.data().plasma.replace(/N|P/, function(char){
+        return char=="N"? "(-)": "(+)"
+    })
+    let city = ""
+    switch (datos.data().city) {
+        case "LP":
+            city = "La Paz"
+            break;
+        case "OR":
+            city = "Oruro"
+            break;
+        case "PT":
+            city = "Potosi"
+            break;
+        case "CB":
+            city = "Cochabamba"
+            break;
+        case "CH":
+            city = "Chuquisaca"
+            break;
+        case "TR":
+            city = "Tarija"
+            break;
+        case "PN":
+            city = "Pando"
+            break;
+        case "BN":
+            city = "Beni"
+            break;
+        case "SC":
+            city = "Santa Cruz"
+            break;
+        default:
+            city = "Error"
+            break;
+    }
+    return `<div class="col-md-4 ftco-animate fadeInUp ftco-animated">
+        <div class="destination">
+            <div class="text p-3">
+                <div class="d-flex justify-content-between">
+                    <div class="two text-left">
+                        <span class="price">${pl}</span>
+                    </div>
+                    <div class="two d-none">
+                        <small><a href="${datos.id}">Reportar</a></small>
+                    </div>
+                </div>
+                <h3 class="days text-uppercase"><span>${datos.data().name}</span></h3>
+                <p class="days text-uppercase"><span>${datos.data().phoneNumber}</span></p>
+                <span><i class="icon-map-o"></i> ${city}, Bo</span>
+                <hr>
+                <p class="bottom-area d-flex">
+                    <span class="mr-auto">
+                        <a class="btn btn-sm btn-info text-white" href="tel:+591${datos.data().phoneNumber}">Llamar</a>
+                    </span>
+                    <span class="ml-auto">
+                        <a class="btn btn-sm btn-success text-white" href="https://wa.me/591${datos.data().phoneNumber}" target="_blank">Whatsapp</a>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>`
+}

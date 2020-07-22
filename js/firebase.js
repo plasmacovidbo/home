@@ -167,6 +167,7 @@ $(document).ready(function () {
 
 });
 
+
 var getParams = function (url) {
     var params = {};
     var parser = document.createElement('a');
